@@ -7,6 +7,7 @@ add = input("Enter Address: ")
 course = input("Enter Course: ")
 level = input("Enter Year Level: ")
 
+print("Personal Information")
 print("First Name:", fname)
 print("Last Name:", lname)
 print("Middle Name:", mname)

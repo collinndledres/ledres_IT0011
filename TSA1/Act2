@@ -1,0 +1,17 @@
+# Function to get the sum of a number
+def sum_of_digits(sum_of_number):
+
+    #Var to store the sum
+    total = 0  
+
+    for char in sum_of_number:
+         #Validation if the Char is a number
+        if char.isdigit(): 
+            #Total Sum
+            total += int(char)  
+    return total
+
+# Get user input
+sum_of_number = input('Enter a number: ')
+result = sum_of_digits(sum_of_number)
+print('The sum of the digits is:' , result)

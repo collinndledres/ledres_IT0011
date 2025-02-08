@@ -1,18 +1,27 @@
-#Using nested for loops
+#To display numbers
+
+#Pattern A
 print('Pattern A: ')
 
 for i in range(1, 6):
+    print("  " * (5 - i), end="")  # Indenting to the right
 
-    print("" * (6 - i) + "".join(str(j) for j in range(1, i + 1)))
+    for j in range(i, 0, -1):  # Printing numbers from right to left
+        print(j, end=" ")
+        
+    print()
 
-# Part b: Using nested while loops
+# Part (b) - Using nested while loops
 print('Pattern B: ')
 
 i = 1
 
-while i <= 7:
+while i <= 6:
+    j = 1
 
-    if i % 2 != 0:
-        print(' ' * (7 - i) + str(i) * i)
+    while j <= i:
+        print(i, end=" ")
+        j += 1
 
+    print()
     i += 1

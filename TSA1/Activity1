@@ -1,31 +1,36 @@
-# Function to analyze character types in a string
-def analyze_string(text):
-    vowels_set = set("aeiouAEIOU")
-    consonants_set = set("bcdfghjklmnpqrstvwxyzBCDFGHJKLMNPQRSTVWXYZ")
+#Function to analyze characters
+def i(text):
+
+    vowels_set = set('aeiouAEIOU')
+    consonants_set = set('bcdfghjklmnpqrstvwxyzBCDFGHJKLMNPQRSTVWXYZ')
     space_char = " "
     
-    vowel_count = consonant_count = space_count = other_count = 0
+    vowelc = consonantc = spacec = otherc = 0
     
-    for character in text:
-        if character in vowels_set:
-            vowel_count += 1
-        elif character in consonants_set:
-            consonant_count += 1
-        elif character == space_char:
-            space_count += 1
+    for x in text:
+
+        if x in vowels_set:
+            vowelc += 1
+
+        elif x in consonants_set:
+            consonantc += 1
+
+        elif x == space_char:
+            spacec += 1
+
         else:
-            other_count += 1
+            otherc += 1
     
-    return vowel_count, consonant_count, space_count, other_count
+    return vowelc, consonantc, spacec, otherc
 
 # Prompt user for input
-user_input = input("Type a sentence: ")
+input_sentence = input('Input sentence: ')
 
-# Process the input
-vowel_total, consonant_total, space_total, other_total = analyze_string(user_input)
+#To process the input
+vowel_total, consonant_total, space_total, other_total = i(input_sentence)
 
-# Print results
-print(f"Total vowels: {vowel_total}")
-print(f"Total consonants: {consonant_total}")
-print(f"Total spaces: {space_total}")
-print(f"Other characters count: {other_total}")
+#Print total count
+print(f'Total vowels: {vowel_total}')
+print(f'Total consonants: {consonant_total}')
+print(f'Total spaces: {space_total}')
+print(f'Other characters count: {other_total}')
